@@ -1,7 +1,7 @@
 # YOLOV5 Based object detection application using Web Server
 This repo contains Unmanned Surface Vessel control scripts. USV uses Jetson Nano as MCU. The Web server is located in Jetson Nano. Web server shows both original video stream and object detection stream using Flask. Also, USV can be controlled over web server. Motor control codes and joystick control scripts can be found here. Sample screenshot can be seen below.
 <br/>
-<img src="static/sampless.png" width="480" height="300"/>
+<img src="static/sampless.png"/>
 ## Installing Libraries
 All required libraries can be found in requirements.txt
 ```
