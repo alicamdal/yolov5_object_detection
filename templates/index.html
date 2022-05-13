@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Surface Vessel Control Panel</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+        max-width:100%;
+        height:auto;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      </style>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="row">
+      <div class="column">
+          <h1>Original Stream</h1>
+          <img src="{{ url_for('orig_feed') }}">
+      </div>
+      <div class="column">
+          <h1>Object Detection</h1>
+          <img src="{{ url_for('detect_feed') }}">
+      </div>
+      <div class="column">
+          <h1 id="thr">?</h1>
+      </div>
+    </div>
+    <script src="{{url_for('static', filename='jquery.min.js')}}"></script>
+    <script type="text/javascript">
+      function update() {
+          $.getJSON('/getThruster',
+                function(data) {
+              document.getElementById("thr").textContent = "Thruster : " + data + "%";
+            });
+      }
+      setInterval(update, 500);
+    </script>
+  </body>
+</html>
