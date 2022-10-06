@@ -1,3 +1,5 @@
+# Conference Paper and Citation
+This study can be accessed through this [paper](https://www.rpsonline.com.sg/proceedings/esrel2022/pdf/S30-05-605.pdf). This repo open to free use. If you have used it, please add the citation to your paper.
 # YOLOV5 Based object detection application using Flask
 This repo contains Unmanned Surface Vessel control scripts. USV uses Jetson Nano as MCU. The Web server is located in Jetson Nano. Web server shows both original video stream and object detection stream using Flask. Also, USV can be controlled over web server. Motor control codes and joystick control scripts can be found [here](https://github.com/alicamdal/motor_controller_usv). Sample screenshot can be seen below.
 <br/>
